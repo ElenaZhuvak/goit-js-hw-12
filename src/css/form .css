@@ -1,0 +1,40 @@
+body {
+    font-family: "Montserrat" sans-serif;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+    width: 371px;
+    height: 40px;
+    margin-top: 36px;
+    margin-bottom: 32px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.input {
+    border-radius: 4px;
+    padding: 8px 16px;
+    width: 272px;
+    height: 22px;
+    background: #fff;
+    border: 1px solid #808080;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #808080;
+}
+.btn {
+    border-radius: 8px;
+    padding: 8px 16px;
+    background: #4e75ff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+    border: none;
+}
