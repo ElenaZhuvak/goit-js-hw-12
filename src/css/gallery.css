@@ -8,11 +8,13 @@
     list-style: none;
     padding: 0;
 }
+.gallery-link {
+  
+}
 .gallery-item {
+    border: 1px solid #808080;
     flex-basis: calc(33.3333% - 48px);
     max-width: 100%;
-}
-.gallery-link {
 }
 .gallery-image {
     display: block;
