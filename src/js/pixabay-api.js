@@ -19,15 +19,8 @@ try {
         }
     });
 
-    const images = response.data
-            if (images.hits.length === 0) {
-                iziToast.error({
-                    title: 'Error',
-                    message: `Sorry, there are no images matching your search query. Please try again!`,
-                    position: "topRight",
-                });
-            }
-        return images;
+    const images = response.data;
+    return images;
 }
     
 catch (error) {
