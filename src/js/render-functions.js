@@ -1,4 +1,4 @@
-export function renderGallery (images) {
+export function renderGallery(images) {
     const gallery = document.querySelector('.gallery');
     gallery.innerHTML = '';
 
@@ -25,9 +25,18 @@ export function renderGallery (images) {
 }
 
 const loaderContainer = document.querySelector('.loader-container');
+const loadMoreBtn = document.querySelector('.load-more');
+
 export function showLoader() {
     loaderContainer.classList.remove('hidden');
 }
 export function hideLoader() {
     loaderContainer.classList.add('hidden')
+}
+
+export function showLoadMore() {
+    loadMoreBtn.classList.remove('hidden');
+}
+export function hideLoadMore() {
+    loadMoreBtn.classList.add('hidden');
 }
