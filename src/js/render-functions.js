@@ -1,6 +1,5 @@
 export function renderGallery(images) {
     const gallery = document.querySelector('.gallery');
-    gallery.innerHTML = '';
 
     const markup = images.map(image => `
         <li class="gallery-item">

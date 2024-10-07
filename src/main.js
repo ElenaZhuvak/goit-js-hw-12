@@ -70,13 +70,20 @@ async function onLoadMore() {
     currentPage += 1;
     showLoader();
     hideLoadMore();
-
+    
     try {
         const data = await fetchImages(currentQuery, currentPage);
 
         if (data.hits.length > 0) {
-            loadedImages += data.hits.length;
             renderGallery(data.hits);
+            loadedImages += data.hits.length;
+
+            const pictureHeight = gallery.firstElementChild.getBoundingClientRect().height;
+            window.scrollBy({
+                top: pictureHeight * 2,
+                behavior: 'smooth',
+            });
+
             lightbox.refresh();
             if (checkEndOfCollection()) {
                 return

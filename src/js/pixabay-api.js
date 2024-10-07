@@ -1,12 +1,14 @@
 import axios from 'axios';
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
+import { hideLoader, showLoader } from './render-functions';
 
 const BASIC_URL = 'https://pixabay.com/api/';
 const KEY_API = '46224221-307a76b395d66c959be951e41';
 
 export async function fetchImages(query, page = 1) {
 try {
+    showLoader();
     const response = await axios.get(BASIC_URL, {
         params: {
             key: KEY_API,
@@ -18,6 +20,7 @@ try {
             per_page: 15,
         }
     });
+    hideLoader()
 
     const images = response.data;
     return images;
